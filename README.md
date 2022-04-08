@@ -1,4 +1,4 @@
-# openw
+# openw - first python project
 
 Simple program to fetch from [openweathermap.org](https://openweathermap.org)
 
