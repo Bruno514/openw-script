@@ -1,6 +1,6 @@
 import os
+
 import toml
-import click
 
 config_dir = os.path.expanduser("~/.config") + "/openw/"
 config_file = "config.toml"

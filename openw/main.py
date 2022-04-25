@@ -2,7 +2,7 @@ import click
 import requests
 
 from openw.config import create_config, get_config_data, write_config_data
-from openw.validate import valid_token, valid_location
+from openw.validate import valid_location, valid_token
 
 create_config()
 
@@ -17,11 +17,11 @@ temp_sym = {"metric": "ºC", "imperial": "ºF", "standard": "ºK"}
     default=get_config_data("token"),
     help="Your API key from openweathermap.org",
 )
-@click.option(
-    "--location",
+@click.argument(
+    "location",
     type=str,
     default=get_config_data("location"),
-    help="Location to fetch the weather from",
+    # help="Location to fetch the weather from",
 )
 @click.option(
     "--units",
