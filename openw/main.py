@@ -1,7 +1,5 @@
 import click
 import requests
-import toml
-import os
 
 from openw.config import create_config, get_config_data, write_config_data
 from openw.validate import valid_token, valid_location
@@ -58,7 +56,7 @@ def cli(token, location, units):
     valid_location(location, token)
 
     # Load parameters
-    parameters = {"q": location, "appid": token, "units": units}
+    parameters = {"q": location, "units": units, "appid": token}
 
     # Get the JSON from openweathermap.org
     json = requests.get(
